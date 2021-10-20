@@ -48,9 +48,10 @@ Http Status Code:
 
 ========== 5xx - Client error responses ================
 
-    500 Internal Server Error
-	501 Not Implemented
+    500 Internal Server Error - The server has encountered a situation it does not know how to handle.
+	501 Not Implemented - The request method is not supported by the server and cannot be handled.
 	502 Bed Gateway (This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.)
+	
 **  503 Service Unavailable (The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded)
 	504 Getway Timeout (This error response is given when the server is acting as a gateway and cannot get a response in time.)
 	
