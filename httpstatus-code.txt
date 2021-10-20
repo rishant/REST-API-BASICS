@@ -14,6 +14,10 @@ Http Status Code:
 3xx - redirection 
    301 Moved Permanently - This and all future requests should be directed to the given URI.
 ** 302 Found and redirect - "Moved temporarily"
+    This response code means that the URI of requested resource has been changed temporarily. Further changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests.
+   303 See Other - Example Once file updated using ASYNC API's then final response will send download URL using GET reqeust and response status code is 303.
+    The server sent this response to direct the client to get the requested resource at another URI with a GET request.
+
    307 Temporary Redirect 
 ---------------------------
 
