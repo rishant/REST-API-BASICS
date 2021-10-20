@@ -16,7 +16,7 @@ Http Status Code:
 2xx - successful response
    200 Successful operation (Post and Update)
 ** 201 Created (Create)
-   202 Request Accepted (Used for ASYNC flow for long running operation and send a temporary API-URL for STATUS check) https://www.youtube.com/watch?v=J4J-eHq_Oms
+** 202 Request Accepted (Used for ASYNC flow for long running operation and send a temporary API-URL for STATUS check) https://www.youtube.com/watch?v=J4J-eHq_Oms
 ** 204 No Content (Delete)
 ---------------------------
 
@@ -31,16 +31,18 @@ Http Status Code:
 ---------------------------
 
 ========= 4xx - Client error responses =================
-   400	Bad Request (The server could not understand the request due to invalid syntax/input)
+** 400	Bad Request (The server could not understand the request due to invalid syntax/input)
 
 ** 401 Unauthorized (Invalid token or login)  - The client hasn’t authorized itself to the backend yet and the server may give it access after that has happened.
 ** 403 Forbidden (Permission) - The client has authorized or doesn’t need to authorize itself, but still has no permissions to access the resource.
 
-   404	Resource not found (The server can not find the requested resource. In the browser, this means the URL is not recognized.)
-** 405	Method Not Allowed - Client is calling a URI/Resource/API and API is present on server but that is not allowed for do operation.
+** 404	Resource not found (The server can not find the requested resource. In the browser, this means the URL is not recognized.)
+   405	Method Not Allowed - Client is calling a URI/Resource/API and API is present on server but that is not allowed for do operation.
 
 ** 408 Request Timeout
    409 Conflict - Client is tring to create resource but that is already present in system. Example: Signup a user in a system but user is allready exist in the system we can use HTTP-Status 409 for response.
+   411 Length Required - Client sent request with "Content-Length" Header attribute and server is expecting this Header attribute.
+** 415 Unsupported Media Type - Client sent request for Resource/API and MediaType Producer/Consumer not supported for that.
 ** 417 Expectation Failed - Client is sending request and server is doing processing and Server side validation comes fail/error then we can use HTTP-Status code 417.
 
 ** 429 Too Many Requests (Rate Limiting)
@@ -49,7 +51,7 @@ Http Status Code:
 
 ========== 5xx - Client error responses ================
 
-    500 Internal Server Error - The server has encountered a situation it does not know how to handle.
+**  500 Internal Server Error - The server has encountered a situation it does not know how to handle.
 	501 Not Implemented - The request method is not supported by the server and cannot be handled.
 	502 Bed Gateway (This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.)
 	
