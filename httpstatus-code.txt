@@ -1,0 +1,43 @@
+Http Status Code: 
+
+1xx - informational response
+** 101 - Websocket
+---------------------------
+
+2xx - successful response
+   200 Successful operation (Post and Update)
+** 201 Created (Create)
+   202 Request Accepted (Used for ASYNC flow for long running operation and send a temporary API-URL for STATUS check) https://www.youtube.com/watch?v=J4J-eHq_Oms
+** 204 No Content (Delete)
+---------------------------
+
+3xx - redirection 
+   301 Moved Permanently - This and all future requests should be directed to the given URI.
+** 302 Found and redirect - "Moved temporarily"
+   307 Temporary Redirect 
+---------------------------
+
+========= 4xx - Client error responses =================
+   400	Bad Request (The server could not understand the request due to invalid syntax/input)
+
+** 401 Unauthorized (Invalid token or login)  - The client hasn’t authorized itself to the backend yet and the server may give it access after that has happened.
+** 403 Forbidden (Permission) - The client has authorized or doesn’t need to authorize itself, but still has no permissions to access the resource.
+
+   404	Resource not found (The server can not find the requested resource. In the browser, this means the URL is not recognized.)
+** 405	Method Not Allowed (Validation Exception)
+
+** 408 Request Timeout
+** 417 Expectation Failed
+
+** 429 Too Many Requests (Rate Limiting)
+
+========== 5xx - Client error responses ================
+
+    500 Internal Server Error
+	501 Not Implemented
+	502 Bed Gateway (This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.)
+**  503 Service Unavailable (The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded)
+	504 Getway Timeout (This error response is given when the server is acting as a gateway and cannot get a response in time.)
+	
+	
+	
