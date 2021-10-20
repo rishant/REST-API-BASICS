@@ -1,3 +1,12 @@
+Status Codes. Below are the different categories:
+
+    Informational (1xx): Indicates that the request was received and the process is continuing. It alerts the sender to wait for a final response.
+    Successful (2xx): Indicates that the request was successfully received, understood, and accepted.
+    Redirection (3xx): Indicates that further action must be taken to complete the request.
+    Client Errors (4xx): Indicates that an error occurred during the request processing and it is the client who caused the error.
+    Server Errors (5xx): Indicates that an error occurred during request processing but that it was by the server.
+
+=======================================================
 Http Status Code: 
 
 1xx - informational response
